@@ -13,6 +13,9 @@
 		9190C28A2340F4EC0021C402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9190C2882340F4EC0021C402 /* Main.storyboard */; };
 		9190C28C2340F4ED0021C402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9190C28B2340F4ED0021C402 /* Assets.xcassets */; };
 		9190C28F2340F4ED0021C402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9190C28D2340F4ED0021C402 /* LaunchScreen.storyboard */; };
+		9190C29923423BE20021C402 /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9190C29623423BE10021C402 /* Starjedi.ttf */; };
+		9190C29A23423BE20021C402 /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9190C29723423BE20021C402 /* Starjhol.ttf */; };
+		9190C29B23423BE20021C402 /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9190C29823423BE20021C402 /* Starjout.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		9190C28B2340F4ED0021C402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9190C28E2340F4ED0021C402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9190C2902340F4ED0021C402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9190C29623423BE10021C402 /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		9190C29723423BE20021C402 /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
+		9190C29823423BE20021C402 /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		9190C2812340F4EC0021C402 /* StarTrivia */ = {
 			isa = PBXGroup;
 			children = (
+				9190C2A023423CA60021C402 /* Model */,
+				9190C29F23423C970021C402 /* View */,
+				9190C29E23423C860021C402 /* Controller */,
 				9190C2822340F4EC0021C402 /* AppDelegate.swift */,
 				9190C2842340F4EC0021C402 /* SceneDelegate.swift */,
 				9190C2862340F4EC0021C402 /* SelectPersonVC.swift */,
+				9190C29D23423C3C0021C402 /* Resources */,
 				9190C2882340F4EC0021C402 /* Main.storyboard */,
 				9190C28B2340F4ED0021C402 /* Assets.xcassets */,
 				9190C28D2340F4ED0021C402 /* LaunchScreen.storyboard */,
 				9190C2902340F4ED0021C402 /* Info.plist */,
 			);
 			path = StarTrivia;
+			sourceTree = "<group>";
+		};
+		9190C29C23423BFA0021C402 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9190C29623423BE10021C402 /* Starjedi.ttf */,
+				9190C29723423BE20021C402 /* Starjhol.ttf */,
+				9190C29823423BE20021C402 /* Starjout.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9190C29D23423C3C0021C402 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9190C29C23423BFA0021C402 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9190C29E23423C860021C402 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9190C29F23423C970021C402 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9190C2A023423CA60021C402 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +176,9 @@
 			files = (
 				9190C28F2340F4ED0021C402 /* LaunchScreen.storyboard in Resources */,
 				9190C28C2340F4ED0021C402 /* Assets.xcassets in Resources */,
+				9190C29923423BE20021C402 /* Starjedi.ttf in Resources */,
+				9190C29A23423BE20021C402 /* Starjhol.ttf in Resources */,
+				9190C29B23423BE20021C402 /* Starjout.ttf in Resources */,
 				9190C28A2340F4EC0021C402 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
