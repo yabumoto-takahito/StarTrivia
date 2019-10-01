@@ -32,7 +32,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpz-nM-a7J">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpz-nM-a7J" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
                                 <rect key="frame" x="20" y="323" width="374" height="250"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="auM-zE-pEU">
@@ -170,11 +170,24 @@
                                     <constraint firstAttribute="trailing" secondItem="auM-zE-pEU" secondAttribute="trailing" constant="20" id="yjF-Mv-mbA"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZL6-W7-SFN" customClass="BlackBgButton" customModule="StarTrivia" customModuleProvider="target">
+                                <rect key="frame" x="119" y="802" width="176" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.60180329619999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="vAf-91-tMG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
+                                <state key="normal" title="$ RANDOM #">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="zpz-nM-a7J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BD0-er-VoN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZL6-W7-SFN" secondAttribute="bottom" constant="20" id="C52-Hi-nyT"/>
                             <constraint firstItem="gNR-Ok-iFr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="C6K-ke-pBq"/>
+                            <constraint firstItem="ZL6-W7-SFN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Haa-hK-Zsa"/>
                             <constraint firstItem="9zY-rz-5tT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="O6P-1G-ff1"/>
                             <constraint firstItem="9zY-rz-5tT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pu2-q6-A9v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9zY-rz-5tT" secondAttribute="trailing" id="bms-PK-OP0"/>
@@ -187,9 +200,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="k1k-fi-ueO"/>
-                    <connections>
-                        <outlet property="stackBg" destination="zpz-nM-a7J" id="dck-zM-BF7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
