@@ -18,6 +18,7 @@
 		9190C29B23423BE20021C402 /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9190C29823423BE20021C402 /* Starjout.ttf */; };
 		9190C2A22343AFDF0021C402 /* BlackBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2A12343AFDF0021C402 /* BlackBgView.swift */; };
 		9190C2A52343BA640021C402 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2A42343BA640021C402 /* Constants.swift */; };
+		9190C2A8234502280021C402 /* PersonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2A7234502280021C402 /* PersonApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9190C29823423BE20021C402 /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
 		9190C2A12343AFDF0021C402 /* BlackBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlackBgView.swift; path = ../../../../BlackBgView.swift; sourceTree = "<group>"; };
 		9190C2A42343BA640021C402 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9190C2A7234502280021C402 /* PersonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				9190C2822340F4EC0021C402 /* AppDelegate.swift */,
 				9190C2842340F4EC0021C402 /* SceneDelegate.swift */,
 				9190C2862340F4EC0021C402 /* SelectPersonVC.swift */,
+				9190C2A6234501850021C402 /* Services */,
 				9190C2A32343B9BC0021C402 /* Utils */,
 				9190C29D23423C3C0021C402 /* Resources */,
 				9190C2882340F4EC0021C402 /* Main.storyboard */,
@@ -128,6 +131,14 @@
 				9190C2A42343BA640021C402 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		9190C2A6234501850021C402 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9190C2A7234502280021C402 /* PersonApi.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9190C2A52343BA640021C402 /* Constants.swift in Sources */,
+				9190C2A8234502280021C402 /* PersonApi.swift in Sources */,
 				9190C2872340F4EC0021C402 /* SelectPersonVC.swift in Sources */,
 				9190C2A22343AFDF0021C402 /* BlackBgView.swift in Sources */,
 				9190C2832340F4EC0021C402 /* AppDelegate.swift in Sources */,
