@@ -22,8 +22,26 @@ class PersonApi {
             // レスポンスに対する処理をここで行う（コールバック関数）
             // task.resume() を実行するとリクエストが行われ、
             // レスポンスが返ってきた時点でここの処理が非同期で行われる
-            print("Data = \(data)")
-            print("Responce = \(responce)")
+            
+//          errorがnilであることを確認
+            guard error == nil else {
+                debugPrint(error.debugDescription)
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+//              型がData型になっているので、JSONに変換
+                let jsonAny = try JSONSerialization.jsonObject(with: data, options: [])
+//              型を[String: Any]としてキャスト
+                guard let json = jsonAny as? [String: Any] else { return }
+                print(json)
+                
+            } catch {
+                debugPrint(error.localizedDescription)
+                return
+            }
         }
         // リクエストを実行
         task.resume()
