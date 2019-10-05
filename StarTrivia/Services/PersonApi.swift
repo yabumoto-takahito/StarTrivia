@@ -10,7 +10,7 @@ import Foundation
 
 class PersonApi {
     
-    func getRandomPersonUrlSession() {
+    func getRandomPersonUrlSession() -> Person {
         
 //      guard let：これ以上処理を進めたくない場合に使用。
 //      nilが入っていたらエラーとして扱う場合によく使う。
@@ -36,7 +36,8 @@ class PersonApi {
                 let jsonAny = try JSONSerialization.jsonObject(with: data, options: [])
 //              型を[String: Any]としてキャスト
                 guard let json = jsonAny as? [String: Any] else { return }
-                print(json)
+                let person = self.parsePersonManual(json: json)
+                return person
                 
             } catch {
                 debugPrint(error.localizedDescription)
@@ -45,5 +46,20 @@ class PersonApi {
         }
         // リクエストを実行
         task.resume()
+    }
+//  [String:Any]：Stringをキーにしてデータはどんな型でも入れることができる
+    private func parsePersonManual(json: [String: Any]) -> Person {
+        let name = json["name"] as? String ?? ""
+        let height = json["height"] as? String ?? ""
+        let mass = json["mass"] as? String ?? ""
+        let hair = json["hair_color"] as? String ?? ""
+        let birthYear = json["birth_year"] as? String ?? ""
+        let gender = json["gender"] as? String ?? ""
+        let homeWorldUrl = json["homeworld"] as? String ?? ""
+        let filmUrls = json["films"] as? [String] ?? [String]()
+        let vehicleUrls = json["vehicles"] as? [String] ?? [String]()
+        let starshipUrls = json["starships"] as? [String] ?? [String]()
+        
+        return Person(name: name, height: height, mass: mass, hair: hair, birthYear: birthYear, gender: gender, homeWorldUrl: homeWorldUrl, filmUrls: filmUrls, vehicleUrls: vehicleUrls, starshipUrls: starshipUrls)
     }
 }
