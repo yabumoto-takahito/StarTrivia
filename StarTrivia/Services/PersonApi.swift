@@ -10,7 +10,7 @@ import Foundation
 
 class PersonApi {
     
-    func getRandomPersonUrlSession() -> Person {
+    func getRandomPersonUrlSession(completion: @escaping PersonResponseCompletion) {
         
 //      guard let：これ以上処理を進めたくない場合に使用。
 //      nilが入っていたらエラーとして扱う場合によく使う。
@@ -26,6 +26,7 @@ class PersonApi {
 //          errorがnilであることを確認
             guard error == nil else {
                 debugPrint(error.debugDescription)
+                completion(nil)
                 return
             }
             
@@ -37,7 +38,7 @@ class PersonApi {
 //              型を[String: Any]としてキャスト
                 guard let json = jsonAny as? [String: Any] else { return }
                 let person = self.parsePersonManual(json: json)
-                return person
+                completion(person)
                 
             } catch {
                 debugPrint(error.localizedDescription)
