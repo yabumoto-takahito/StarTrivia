@@ -10,11 +10,11 @@ import Foundation
 
 class PersonApi {
     
-    func getRandomPersonUrlSession(completion: @escaping PersonResponseCompletion) {
+    func getRandomPersonUrlSession(id: Int, completion: @escaping PersonResponseCompletion) {
         
 //      guard let：これ以上処理を進めたくない場合に使用。
 //      nilが入っていたらエラーとして扱う場合によく使う。
-        guard let url = URL(string: PERSON_URL) else { return }
+        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
         
 //      dataTask(with:completionHandler:)
 //      渡したリクエストを非同期で実行する。読み込みが完了するとcompletionHandlerが実行される
@@ -26,6 +26,7 @@ class PersonApi {
 //          errorがnilであることを確認
             guard error == nil else {
                 debugPrint(error.debugDescription)
+                // 渡されたクロージャを実行
                 completion(nil)
                 return
             }
@@ -38,7 +39,11 @@ class PersonApi {
 //              型を[String: Any]としてキャスト
                 guard let json = jsonAny as? [String: Any] else { return }
                 let person = self.parsePersonManual(json: json)
-                completion(person)
+                DispatchQueue.main.async {
+                    // 渡されたクロージャを実行
+                    completion(person)
+                }
+                
                 
             } catch {
                 debugPrint(error.localizedDescription)
