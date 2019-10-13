@@ -7,23 +7,46 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 class PersonApi {
     
+    // Web Request with Alamofire
+    func getRandomPersonAlamo(id: Int, completion: @escaping PersonResponseCompletion) {
+        // guard let：これ以上処理を進めたくない場合に使用。
+        // nilが入っていたらエラーとして扱う場合によく使う。
+        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
+        // APIへリクエストを送信し、返ってきた情報を取得
+        AF.request(url).responseJSON { (response) in
+            switch response.result {
+                case .success:
+                    let json = JSON(response.data as Any)
+                    let person = self.parsePersonSwifty(json: json)
+                    completion(person)
+                
+                case .failure(let error):
+                    debugPrint(error.errorDescription)
+                    completion(nil)
+                    return
+            }
+        }
+    }
+    
+    // Web Request with URL Session
     func getRandomPersonUrlSession(id: Int, completion: @escaping PersonResponseCompletion) {
-        
-//      guard let：これ以上処理を進めたくない場合に使用。
-//      nilが入っていたらエラーとして扱う場合によく使う。
+    // guard let：これ以上処理を進めたくない場合に使用。
+    // nilが入っていたらエラーとして扱う場合によく使う。
         guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
         
-//      dataTask(with:completionHandler:)
-//      渡したリクエストを非同期で実行する。読み込みが完了するとcompletionHandlerが実行される
-        let task = URLSession.shared.dataTask(with: url) { (data, responce, error) in
+    // dataTask(with:completionHandler:)
+    // 渡したリクエストを非同期で実行する。読み込みが完了するとcompletionHandlerが実行される
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             // レスポンスに対する処理をここで行う（コールバック関数）
             // task.resume() を実行するとリクエストが行われ、
             // レスポンスが返ってきた時点でここの処理が非同期で行われる
             
-//          errorがnilであることを確認
+            // errorがnilであることを確認
             guard error == nil else {
                 debugPrint(error.debugDescription)
                 // 渡されたクロージャを実行
@@ -34,9 +57,9 @@ class PersonApi {
             guard let data = data else { return }
             
             do {
-//              型がData型になっているので、JSONに変換
+                // 型がData型になっているので、JSONに変換
                 let jsonAny = try JSONSerialization.jsonObject(with: data, options: [])
-//              型を[String: Any]としてキャスト
+                // 型を[String: Any]としてキャスト
                 guard let json = jsonAny as? [String: Any] else { return }
                 let person = self.parsePersonManual(json: json)
                 DispatchQueue.main.async {
@@ -53,7 +76,25 @@ class PersonApi {
         // リクエストを実行
         task.resume()
     }
-//  [String:Any]：Stringをキーにしてデータはどんな型でも入れることができる
+    
+    // Parsing with SwiftyJson
+    private func parsePersonSwifty(json: JSON) -> Person {
+        let name = json["name"].stringValue
+        let height = json["height"].stringValue
+        let mass = json["mass"].stringValue
+        let hair = json["hair_color"].stringValue
+        let birthYear = json["birth_year"].stringValue
+        let gender = json["gender"].stringValue
+        let homeWorldUrl = json["homeworld"].stringValue
+        let filmUrls = json["films"].arrayValue.map({$0.stringValue})
+        let vehicleUrls = json["vehicles"].arrayValue.map({$0.stringValue})
+        let starshipUrls = json["starships"].arrayValue.map({$0.stringValue})
+        
+        return Person(name: name, height: height, mass: mass, hair: hair, birthYear: birthYear, gender: gender, homeWorldUrl: homeWorldUrl, filmUrls: filmUrls, vehicleUrls: vehicleUrls, starshipUrls: starshipUrls)
+    }
+    
+    // Parsing function using manual methods
+    // [String:Any]：Stringをキーにしてデータはどんな型でも入れることができる
     private func parsePersonManual(json: [String: Any]) -> Person {
         let name = json["name"] as? String ?? ""
         let height = json["height"] as? String ?? ""
