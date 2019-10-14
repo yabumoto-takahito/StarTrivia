@@ -12,26 +12,38 @@ import SwiftyJSON
 
 class PersonApi {
     
-    // Web Request with Alamofire
+    // Web Request with Alamofire and Codable
     func getRandomPersonAlamo(id: Int, completion: @escaping PersonResponseCompletion) {
-        // guard let：これ以上処理を進めたくない場合に使用。
-        // nilが入っていたらエラーとして扱う場合によく使う。
         guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
-        // APIへリクエストを送信し、返ってきた情報を取得
         AF.request(url).responseJSON { (response) in
-            switch response.result {
-                case .success:
-                    let json = JSON(response.data as Any)
-                    let person = self.parsePersonSwifty(json: json)
-                    completion(person)
-                
-                case .failure(let error):
-                    debugPrint(error.errorDescription)
-                    completion(nil)
-                    return
+            guard let data = response.data else { return completion(nil) }
+            let jsonDecoder = JSONDecoder()
+            do {
+                let person = try jsonDecoder.decode(Person.self, from: data)
+                completion(person)
+            } catch {
+                debugPrint(error.localizedDescription)
+                completion(nil)
             }
         }
     }
+    
+//    // Web Request with Alamofire and SwiftyJson
+//    func getRandomPersonAlamo(id: Int, completion: @escaping PersonResponseCompletion) {
+//        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
+//        AF.request(url).responseJSON { (response) in
+//            switch response.result {
+//                case .success:
+//                    let json = JSON(response.data as Any)
+//                    let person = self.parsePersonSwifty(json: json)
+//                    completion(person)
+//
+//                case .failure(let error):
+//                    debugPrint(error.localizedDescription)
+//                    completion(nil)
+//            }
+//        }
+//    }
     
     // Web Request with URL Session
     func getRandomPersonUrlSession(id: Int, completion: @escaping PersonResponseCompletion) {
@@ -66,8 +78,6 @@ class PersonApi {
                     // 渡されたクロージャを実行
                     completion(person)
                 }
-                
-                
             } catch {
                 debugPrint(error.localizedDescription)
                 return
