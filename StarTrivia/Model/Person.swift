@@ -8,7 +8,7 @@
 
 import Foundation
 
-//Personの定義
+// Personの定義
 struct Person : Codable {
     let name: String
     let height: String
@@ -21,6 +21,7 @@ struct Person : Codable {
     let vehicleUrls: [String]
     let starshipUrls: [String]
     
+    // EncodeとDecodeでキー名が異なる時に一対一対応させる必要がある。その時に使うのが「CodingKeys」。
     enum CodingKeys: String, CodingKey {
         case name
         case height
