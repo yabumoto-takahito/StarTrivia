@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		9190C2A52343BA640021C402 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2A42343BA640021C402 /* Constants.swift */; };
 		9190C2A8234502280021C402 /* PersonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2A7234502280021C402 /* PersonApi.swift */; };
 		9190C2AA23485F750021C402 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2A923485F750021C402 /* Person.swift */; };
+		91FEEF43235CB2D700973AC2 /* FadeEnabledBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FEEF42235CB2D700973AC2 /* FadeEnabledBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9190C2A42343BA640021C402 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9190C2A7234502280021C402 /* PersonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApi.swift; sourceTree = "<group>"; };
 		9190C2A923485F750021C402 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		91FEEF42235CB2D700973AC2 /* FadeEnabledBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeEnabledBtn.swift; sourceTree = "<group>"; };
 		BE3C026F3EF70C4B6F8593E7 /* Pods-StarTrivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarTrivia.debug.xcconfig"; path = "Target Support Files/Pods-StarTrivia/Pods-StarTrivia.debug.xcconfig"; sourceTree = "<group>"; };
 		DA227EBF9D14C141AAE29F5F /* Pods_StarTrivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarTrivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,7 +64,6 @@
 				BE3C026F3EF70C4B6F8593E7 /* Pods-StarTrivia.debug.xcconfig */,
 				31AD7425D3A00DEC2ACD8952 /* Pods-StarTrivia.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -133,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				9190C2A12343AFDF0021C402 /* BlackBgView.swift */,
+				91FEEF42235CB2D700973AC2 /* FadeEnabledBtn.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +295,7 @@
 				9190C2A22343AFDF0021C402 /* BlackBgView.swift in Sources */,
 				9190C2AA23485F750021C402 /* Person.swift in Sources */,
 				9190C2832340F4EC0021C402 /* AppDelegate.swift in Sources */,
+				91FEEF43235CB2D700973AC2 /* FadeEnabledBtn.swift in Sources */,
 				9190C2852340F4EC0021C402 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
