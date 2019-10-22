@@ -22,6 +22,10 @@
 		9190C2A8234502280021C402 /* PersonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2A7234502280021C402 /* PersonApi.swift */; };
 		9190C2AA23485F750021C402 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2A923485F750021C402 /* Person.swift */; };
 		91FEEF43235CB2D700973AC2 /* FadeEnabledBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FEEF42235CB2D700973AC2 /* FadeEnabledBtn.swift */; };
+		91FEEF45235F582400973AC2 /* HomeworldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FEEF44235F582400973AC2 /* HomeworldVC.swift */; };
+		91FEEF47235F584500973AC2 /* VehiclesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FEEF46235F584500973AC2 /* VehiclesVC.swift */; };
+		91FEEF49235F586400973AC2 /* StarshipsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FEEF48235F586400973AC2 /* StarshipsVC.swift */; };
+		91FEEF4B235F588100973AC2 /* FilmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FEEF4A235F588100973AC2 /* FilmsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		9190C2A7234502280021C402 /* PersonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApi.swift; sourceTree = "<group>"; };
 		9190C2A923485F750021C402 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		91FEEF42235CB2D700973AC2 /* FadeEnabledBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeEnabledBtn.swift; sourceTree = "<group>"; };
+		91FEEF44235F582400973AC2 /* HomeworldVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworldVC.swift; sourceTree = "<group>"; };
+		91FEEF46235F584500973AC2 /* VehiclesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesVC.swift; sourceTree = "<group>"; };
+		91FEEF48235F586400973AC2 /* StarshipsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsVC.swift; sourceTree = "<group>"; };
+		91FEEF4A235F588100973AC2 /* FilmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsVC.swift; sourceTree = "<group>"; };
 		BE3C026F3EF70C4B6F8593E7 /* Pods-StarTrivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarTrivia.debug.xcconfig"; path = "Target Support Files/Pods-StarTrivia/Pods-StarTrivia.debug.xcconfig"; sourceTree = "<group>"; };
 		DA227EBF9D14C141AAE29F5F /* Pods_StarTrivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarTrivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,7 +101,6 @@
 				9190C29E23423C860021C402 /* Controller */,
 				9190C2822340F4EC0021C402 /* AppDelegate.swift */,
 				9190C2842340F4EC0021C402 /* SceneDelegate.swift */,
-				9190C2862340F4EC0021C402 /* SelectPersonVC.swift */,
 				9190C2A6234501850021C402 /* Services */,
 				9190C2A32343B9BC0021C402 /* Utils */,
 				9190C29D23423C3C0021C402 /* Resources */,
@@ -126,6 +133,11 @@
 		9190C29E23423C860021C402 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9190C2862340F4EC0021C402 /* SelectPersonVC.swift */,
+				91FEEF44235F582400973AC2 /* HomeworldVC.swift */,
+				91FEEF46235F584500973AC2 /* VehiclesVC.swift */,
+				91FEEF48235F586400973AC2 /* StarshipsVC.swift */,
+				91FEEF4A235F588100973AC2 /* FilmsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,10 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FEEF4B235F588100973AC2 /* FilmsVC.swift in Sources */,
 				9190C2A52343BA640021C402 /* Constants.swift in Sources */,
 				9190C2A8234502280021C402 /* PersonApi.swift in Sources */,
 				9190C2872340F4EC0021C402 /* SelectPersonVC.swift in Sources */,
+				91FEEF47235F584500973AC2 /* VehiclesVC.swift in Sources */,
+				91FEEF45235F582400973AC2 /* HomeworldVC.swift in Sources */,
 				9190C2A22343AFDF0021C402 /* BlackBgView.swift in Sources */,
+				91FEEF49235F586400973AC2 /* StarshipsVC.swift in Sources */,
 				9190C2AA23485F750021C402 /* Person.swift in Sources */,
 				9190C2832340F4EC0021C402 /* AppDelegate.swift in Sources */,
 				91FEEF43235CB2D700973AC2 /* FadeEnabledBtn.swift in Sources */,
