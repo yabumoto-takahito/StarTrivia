@@ -10,6 +10,8 @@
 		6DE291C74ED3EAD63148CB87 /* Pods_StarTrivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA227EBF9D14C141AAE29F5F /* Pods_StarTrivia.framework */; };
 		912997E2237FA07300897BB4 /* Homeworld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912997E1237FA07300897BB4 /* Homeworld.swift */; };
 		912997E4237FA33400897BB4 /* HomeworldApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912997E3237FA33400897BB4 /* HomeworldApi.swift */; };
+		912997EA23802A1E00897BB4 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912997E923802A1E00897BB4 /* Vehicle.swift */; };
+		912997EC23802A5100897BB4 /* VehicleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912997EB23802A5100897BB4 /* VehicleApi.swift */; };
 		9190C2832340F4EC0021C402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2822340F4EC0021C402 /* AppDelegate.swift */; };
 		9190C2852340F4EC0021C402 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2842340F4EC0021C402 /* SceneDelegate.swift */; };
 		9190C2872340F4EC0021C402 /* SelectPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190C2862340F4EC0021C402 /* SelectPersonVC.swift */; };
@@ -34,6 +36,8 @@
 		31AD7425D3A00DEC2ACD8952 /* Pods-StarTrivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarTrivia.release.xcconfig"; path = "Target Support Files/Pods-StarTrivia/Pods-StarTrivia.release.xcconfig"; sourceTree = "<group>"; };
 		912997E1237FA07300897BB4 /* Homeworld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeworld.swift; sourceTree = "<group>"; };
 		912997E3237FA33400897BB4 /* HomeworldApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworldApi.swift; sourceTree = "<group>"; };
+		912997E923802A1E00897BB4 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		912997EB23802A5100897BB4 /* VehicleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleApi.swift; sourceTree = "<group>"; };
 		9190C27F2340F4EC0021C402 /* StarTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9190C2822340F4EC0021C402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9190C2842340F4EC0021C402 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			children = (
 				9190C2A923485F750021C402 /* Person.swift */,
 				912997E1237FA07300897BB4 /* Homeworld.swift */,
+				912997E923802A1E00897BB4 /* Vehicle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			children = (
 				9190C2A7234502280021C402 /* PersonApi.swift */,
 				912997E3237FA33400897BB4 /* HomeworldApi.swift */,
+				912997EB23802A5100897BB4 /* VehicleApi.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -310,7 +316,9 @@
 				91FEEF4B235F588100973AC2 /* FilmsVC.swift in Sources */,
 				9190C2A52343BA640021C402 /* Constants.swift in Sources */,
 				912997E4237FA33400897BB4 /* HomeworldApi.swift in Sources */,
+				912997EA23802A1E00897BB4 /* Vehicle.swift in Sources */,
 				9190C2A8234502280021C402 /* PersonApi.swift in Sources */,
+				912997EC23802A5100897BB4 /* VehicleApi.swift in Sources */,
 				9190C2872340F4EC0021C402 /* SelectPersonVC.swift in Sources */,
 				91FEEF47235F584500973AC2 /* VehiclesVC.swift in Sources */,
 				91FEEF45235F582400973AC2 /* HomeworldVC.swift in Sources */,

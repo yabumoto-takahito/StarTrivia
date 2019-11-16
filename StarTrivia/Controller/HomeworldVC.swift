@@ -18,7 +18,6 @@ class HomeworldVC: UIViewController, PersonProtocol {
     var person: Person!
     let homeworldApi = HomeworldApi()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         homeworldApi.getHomeworld(url: person.homeWorldUrl) { (homeworld) in
