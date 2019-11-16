@@ -15,3 +15,4 @@ let PERSON_URL = URL_BASE + "people/"
 
 //型エイリアス
 typealias PersonResponseCompletion = (Person?) -> Void
+typealias HomeworldResponseCompletion = (Homeworld?) -> Void
