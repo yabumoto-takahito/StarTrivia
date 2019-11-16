@@ -10,6 +10,17 @@ import UIKit
 
 class VehiclesVC: UIViewController, PersonProtocol {
     
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var modelLbl: UILabel!
+    @IBOutlet weak var makerLbl: UILabel!
+    @IBOutlet weak var costLbl: UILabel!
+    @IBOutlet weak var lengthLbl: UILabel!
+    @IBOutlet weak var speedLbl: UILabel!
+    @IBOutlet weak var crewLbl: UILabel!
+    @IBOutlet weak var passengersLbl: UILabel!
+    @IBOutlet weak var previousBtn: UIButton!
+    @IBOutlet weak var nextBtn: UIButton!
+    
     var person: Person!
 
     override func viewDidLoad() {
@@ -19,15 +30,11 @@ class VehiclesVC: UIViewController, PersonProtocol {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func previousClicked(_ sender: Any) {
+        
     }
-    */
-
+    
+    @IBAction func nextClicked(_ sender: Any) {
+        
+    }
 }
